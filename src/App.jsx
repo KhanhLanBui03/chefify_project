@@ -15,23 +15,7 @@ import RecipeDetail from "./components/RecipeDetail";
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
-
-  // 🎯 Hook để xử lý cuộn mượt
-  useEffect(() => {
-    const handleWheel = (event) => {
-      event.preventDefault();
-      window.scrollTo({
-        top: window.scrollY + event.deltaY,
-        behavior: "smooth",
-      });
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: false });
-
-    return () => {
-      window.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <Provider store={store}>
