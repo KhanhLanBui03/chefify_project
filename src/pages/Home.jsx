@@ -7,22 +7,22 @@ function Home() {
 
   const recipesData = {
     summerRecipes: [
-      { id: 1, title: "Bánh", image: "/fooddetail.jpg" },
+      { id: 1, title: "Cake", image: "/fooddetail.jpg" },
       { id: 2, title: "Spaghetti", image: "/food4.jpg" },
       { id: 3, title: "Lettuce Delight", image: "/food2.jpg" },
       { id: 4, title: "Snack Cakes", image: "/food3.jpg" },
     ],
     videoRecipes: [
-      { id: 5, title: "Omelette", image: "/video-1.jpg" },
-      { id: 6, title: "Rice Balls", image: "/video-2.jpg" },
-      { id: 7, title: "Savory Soup", image: "/video-3.jpg" },
-      { id: 8, title: "Delight Salad", image: "/video-4.jpg" },
+      { id: 5, title: "Omelette", image: "/Omelette.jpg" },
+      { id: 6, title: "Rice Balls", image: "/RiceBall.jpg" },
+      { id: 7, title: "Savory Soup", image: "/SavorySoup.jpg" },
+      { id: 8, title: "Delight Salad", image: "/DelightSalad.jpg" },
     ],
     editorsPick: [
-      { id: 9, title: "Stuffed Sticky Rice Ball", author: "John Doe", image: "/editor-1.jpg" },
-      { id: 10, title: "Strawberry Smoothie", author: "Jane Smith", image: "/editor-2.jpg" },
-      { id: 11, title: "Latte Art", author: "Liam Brown", image: "/editor-3.jpg" },
-      { id: 12, title: "Butter Fried Noodles", author: "Emma Green", image: "/editor-4.jpg" },
+      { id: 9, title: "Stuffed Sticky Rice Ball", author: "John Doe", image: "/StuffedStickyRiceBall.jpg" },
+      { id: 10, title: "Strawberry Smoothie", author: "Jane Smith", image: "/Strawberry Smoothie.jpg" },
+      { id: 11, title: "Latte Art", author: "Liam Brown", image: "/Latte Art.jpg" },
+      { id: 12, title: "Butter Fried Noodles", author: "Emma Green", image: "/Butter Fried Noodles.jpg" },
     ],
   };
 
@@ -70,7 +70,7 @@ function Home() {
           {recipesData.videoRecipes.map((recipe) => (
             <Col key={recipe.id} md={3}>
               <Card className="shadow hover-shadow">
-                <Card.Img variant="top" src={recipe.image} />
+                <Card.Img  className="img-fluid" variant="top" src={recipe.image} style={{ width: "17rem", height: "10rem", objectFit: "cover" }} />
                 <Card.Body className="text-center">
                   <Card.Title>{recipe.title}</Card.Title>
                   <Button variant="outline-danger" onClick={() => navigate(`/recipe/${recipe.id}`)}>Watch</Button>
@@ -88,7 +88,7 @@ function Home() {
           {recipesData.editorsPick.map((recipe) => (
             <Col key={recipe.id} md={6}>
               <Card className="shadow d-flex flex-row hover-shadow">
-                <Card.Img variant="left" src={recipe.image} style={{ width: "150px", height: "100px", objectFit: "cover" }} />
+                <Card.Img  className="img-fluid" variant="left" src={recipe.image} style={{ width: "15rem", height: "10rem", objectFit: "cover" }} />
                 <Card.Body>
                   <Card.Title>{recipe.title}</Card.Title>
                   <Card.Text className="text-muted">by {recipe.author}</Card.Text>

@@ -45,7 +45,7 @@ function RecipeBox() {
     <Container className="mt-4">
       <Row className="align-items-center mb-4">
         <Col xs="auto">
-          <Image src="profile.jpg" roundedCircle />
+          <Image style={{width: "10rem", height: "10rem"}} src="/profile.jpg" roundedCircle />
         </Col>
         <Col>
           <h2>Emma Gonzalez's Recipe Box</h2>

@@ -14,7 +14,7 @@ function About() {
           <Image 
             src="./public/food8.jpg" 
             fluid 
-            className="rounded-4 shadow-sm"
+            className="rounded-4 shadow-sm w-75 ms-5"
           />
         </Col>
         <Col md={6}>
